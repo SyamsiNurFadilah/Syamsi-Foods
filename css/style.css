@@ -1,0 +1,410 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Girassol", serif;
+    color: #000;
+    scroll-behavior: smooth;
+}
+
+header {
+    min-height: 100vh;
+    background-image: url('../img/banner.png');
+    align-items: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 0;
+}
+
+.wrapper {
+    width: 1024px;
+    margin: 0 auto;
+
+}
+
+.logo {
+    font-size: 25px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+}
+
+.logo a {
+    text-decoration: none;
+}
+
+.navbar {
+    font-size: 20px;
+    font-family: 600;
+    display: flex;
+    gap: 2rem;
+    padding: 5px 0;
+}
+
+.navbar ul {
+    display: flex;
+    gap: 2rem;
+}
+
+.navbar ul li {
+    list-style-type: none;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+}
+
+.navbar ul li a:hover {
+    color: #fff;
+    border-bottom: 1.5px solid #fff;
+}
+
+.hamburger-menu {
+    position: fixed;
+    top: 13px;
+    right: 25px;
+    z-index: 999;
+    display: none;
+    cursor: pointer;
+    font-size: 20px;
+
+}
+
+.container {
+    min-height: 100vh;
+    background-image: url('../img/background.png');
+    align-items: center;
+    background-repeat: repeat-y;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+}
+
+.header-tentang {
+    padding: 3rem 0 0 0;
+    text-align: center;
+    font-size: 20px;
+}
+
+.tentang {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    align-items: center;
+    gap: 2rem;
+    padding: 3rem 0;
+}
+
+.tentang h2 {
+    text-align: center;
+}
+
+.tentang-left p {
+    text-align: justify;
+    font-weight: 500;
+    font-size: 20px;
+    color: #000;
+    background: #ef9718;
+}
+
+.tentang-right img {
+    width: 100%;
+    border-radius: 5px;
+    height: auto;
+}
+
+.header-momen {
+    padding: 3rem 0 0 0;
+    text-align: center;
+    font-size: 20px;
+}
+
+.momen {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    align-items: center;
+    gap: 2rem;
+    padding: 3rem 0;
+}
+
+.momen img {
+    border-radius: 5px;
+    width: 100%;
+}
+
+.header-menu {
+    padding: 3rem 0 0 0;
+    text-align: center;
+    font-size: 20px;
+}
+
+.menu-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    padding: 3rem 0;
+}
+
+.menu-list {
+    text-align: center;
+    padding: 3rem;
+    background: #c33916;
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    outline: 2px solid #ef9718;
+    outline-offset: -1.5rem;
+    cursor: pointer;
+}
+
+.menu-list:hover {
+    filter: grayscale(0.5);
+}
+
+.menu-list img {
+    width: 150px;
+}
+
+.food img {
+    width: 200px;
+}
+
+.menu-list-preview {
+    position: fixed;
+    top: 0;
+    left: 0;
+    min-height: 100vh;
+    width: 100%;
+    background: rgba(0, 0, 0, .6);
+    display: none;
+    justify-content: center;
+}
+
+.detail {
+    background: #ef9718;
+    border: none;
+    padding: 5px;
+}
+
+.detail:hover {
+    background: #d58414;
+}
+
+.preview {
+    display: none;
+    padding: 2rem;
+    text-align: center;
+    background: #ef9718;
+    margin: 2rem;
+    position: relative;
+    width: 25rem;
+    border-radius: 20px;
+}
+
+.preview.active {
+    display: inline-block;
+}
+
+.preview img {
+    height: 200px;
+    margin: 20px 0;
+}
+
+.preview h3 {
+    font-size: 1.6rem;
+}
+
+.preview .harga {
+    font-weight: 600;
+}
+
+button {
+    margin-top: 10px;
+    font-size: 18px;
+    width: 100%;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.button button {
+    text-decoration: none;
+    background-color: #c33916;
+    padding: 5px;
+    border: 1.5px solid;
+    border-radius: 5px;
+}
+
+.button button:hover {
+    background-color: #b73413;
+}
+
+.rating i {
+    color: #c33916;
+}
+
+.fa-x {
+    cursor: pointer;
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    font-size: 25px;
+}
+
+.fa-x:hover {
+    color: #c33916;
+}
+
+.header-kontak {
+    padding: 3rem 0 0 0;
+    text-align: center;
+    font-size: 20px;
+}
+
+.kontak {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    padding: 3rem 0;
+}
+
+iframe {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.kontak-item {
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.kontak-icon {
+    font-size: 25px;
+}
+
+footer {
+    padding: 5rem 0 0 0;
+}
+
+.footer {
+    background: #c33916;
+    width: 100%;
+    min-height: 100px;
+    padding: 20px 50px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.footer-icon a {
+    margin: 5px;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+.footer-text {
+    margin-top: 8px;
+}
+
+.footer-icon a i:hover {
+    color: #fff;
+}
+
+.nav-footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 8px;
+}
+
+.nav-footer ul {
+    list-style-type: none;
+    display: flex;
+    gap: 10px;
+}
+
+.nav-footer ul li a {
+    text-decoration: none;
+}
+
+.nav-footer ul li a:hover {
+    color: #fff;
+}
+
+@media screen and (max-width: 1200px) {
+    .wrapper {
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 825px) {
+    h2 {
+        font-size: 20px;
+    }
+
+    .menu-list img {
+        width: 120px;
+    }
+
+    .momen img {
+        width: 80%;
+    }
+
+    .tentang-left p {
+        font-size: 18px;
+    }
+
+    .logo {
+        font-size: 20px;
+    }
+
+    .menu-list h3 {
+        font-size: 20px;
+    }
+
+    .harga {
+        font-size: 18px;
+    }
+
+    .hamburger-menu {
+        display: inline-block;
+        cursor: pointer;
+        z-index: 999;
+    }
+
+    .header .navbar {
+        position: fixed;
+        width: 50%;
+        right: 0;
+        top: 0;
+        height: 100vh;
+        flex-direction: column;
+        background: #b73413;
+        z-index: 99;
+        transition: 0.4s;
+        transform: translateX(100%);
+    }
+
+    nav ul {
+        height: 100vh;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .header .navbar.active {
+        transform: translateX(0);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .preview img {
+        height: 150px;
+        margin: 10px 0;
+    }
+}
